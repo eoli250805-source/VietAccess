@@ -69,7 +69,7 @@ export const HelpEducation: React.FC = () => {
     },
     {
       term: 'Ring-Fenced Depository Account',
-      def: 'A segregated trust account held by the custodian that is legally bankruptcy-remote from the platform operator.'
+      def: 'A segregated trust account held by the custodian designed for bankruptcy-remote asset segregation, subject to regulatory approval.'
     },
     {
       term: 'Permissioned Ledger',
@@ -115,7 +115,7 @@ export const HelpEducation: React.FC = () => {
           </div>
           <h3 className="font-bold text-base text-white">100% Segregated Custody</h3>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Every token is strictly 1:1 backed by physical equities registered at the VSD in bankruptcy-remote trust vaults managed by Lotus Custody Bank.
+            Every token is strictly 1:1 backed by physical equities registered at the VSD in trust vaults designed for bankruptcy-remote asset segregation (subject to regulatory approval) managed by Lotus Custody Bank.
           </p>
         </div>
 

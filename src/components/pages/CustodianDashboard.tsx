@@ -147,15 +147,18 @@ export const CustodianDashboard: React.FC = () => {
 
         <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
           <div className="flex items-center justify-between text-slate-400 text-xs">
-            <span className="font-mono uppercase text-[10px]">Reserve Parity Ratio</span>
+            <span className="font-mono uppercase text-[10px]">Current Collateral Coverage</span>
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
           </div>
           <div className="text-2xl font-bold text-emerald-400 font-mono">
             {overallCoverage.toFixed(2)}%
           </div>
-          <p className="text-[11px] text-emerald-300 font-mono">
-            100% Ring-Fenced Backing
-          </p>
+          <div className="text-[11px] space-y-0.5">
+            <p className="font-mono text-emerald-300">Required backing ratio: 100% minimum</p>
+            <p className="text-slate-400 font-mono text-[10px]">
+              Unallocated shares: {((totalVaultShares - totalIssuedReceipts) / 1000000).toFixed(1)} million ({((totalVaultShares - totalIssuedReceipts)).toLocaleString()} shares)
+            </p>
+          </div>
         </div>
 
         <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">

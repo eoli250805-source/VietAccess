@@ -245,10 +245,10 @@ export const MarketDashboard: React.FC = () => {
                     {/* Custody Backing & Availability */}
                     <div className="grid grid-cols-2 gap-2 pt-1 text-[11px] font-mono">
                       <div className="p-2 rounded-lg bg-slate-950/60 border border-slate-800/80">
-                        <span className="text-slate-500 block text-[10px]">CUSTODY BACKING</span>
+                        <span className="text-slate-500 block text-[10px]">REQ. BACKING</span>
                         <span className="text-emerald-400 font-bold flex items-center gap-1 mt-0.5">
                           <CheckCircle2 className="w-3 h-3" />
-                          100.0%
+                          100% Min
                         </span>
                       </div>
                       <div className="p-2 rounded-lg bg-slate-950/60 border border-slate-800/80">

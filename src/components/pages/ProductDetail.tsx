@@ -180,7 +180,7 @@ export const ProductDetail: React.FC = () => {
             Primary Issuance & Custody Active
           </span>
           <span className="text-[11px] text-slate-400 hidden md:inline">
-            — Instant allocation against segregated depository balance
+            — Allocation after custody confirmation and settlement
           </span>
         </div>
 
@@ -297,11 +297,19 @@ export const ProductDetail: React.FC = () => {
               </h4>
               <div className="p-4 rounded-xl bg-slate-950 border border-emerald-500/40 space-y-2 text-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Reserve Parity:</span>
-                  <span className="text-emerald-400 font-bold font-mono">100.00% MATCH</span>
+                  <span className="text-slate-400">Required Backing Ratio:</span>
+                  <span className="text-emerald-400 font-bold font-mono">100% MINIMUM</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Physical Equities:</span>
+                  <span className="text-slate-400">Current Collateral Coverage:</span>
+                  <span className="text-emerald-400 font-bold font-mono">
+                    {product.receiptsIssued > 0
+                      ? ((product.underlyingSharesHeld / product.receiptsIssued) * 100).toFixed(2)
+                      : '100.00'}%
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-400">Physical Equities in Vault:</span>
                   <span className="text-slate-200 font-mono font-semibold">
                     {product.underlyingSharesHeld.toLocaleString()}
                   </span>
@@ -313,9 +321,9 @@ export const ProductDetail: React.FC = () => {
                   </span>
                 </div>
                 <div className="flex items-center justify-between pt-2 border-t border-slate-800 text-[11px]">
-                  <span className="text-slate-500">Unallocated Reserve:</span>
-                  <span className="text-slate-400 font-mono">
-                    {product.availableReceipts.toLocaleString()} units
+                  <span className="text-slate-500">Unallocated Shares:</span>
+                  <span className="text-slate-300 font-mono font-medium">
+                    {(product.underlyingSharesHeld - product.receiptsIssued).toLocaleString()} shares
                   </span>
                 </div>
               </div>

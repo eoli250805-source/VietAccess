@@ -46,7 +46,7 @@ const ARCHITECTURE_NODES: ArchitectureNode[] = [
     role: 'Special Purpose Vehicle issuing 1:1 backed digital receipts against ring-fenced equity reserves.',
     licensing: 'Regulated special-purpose issuing entity under domestic sandbox jurisdiction.',
     assetFlow: 'Coordinates primary issuance, receipt minting, and dividend pass-through.',
-    riskSeparation: 'Statutory bankruptcy-remote SPV; platform insolvency cannot impair custody shares.'
+    riskSeparation: 'Designed for bankruptcy-remote asset segregation under SPV framework, subject to regulatory approval.'
   },
   {
     id: 'custodian',
@@ -144,23 +144,23 @@ export const LandingPage: React.FC = () => {
 
           <div className="space-y-1">
             <span className="text-xs text-slate-400 font-mono uppercase tracking-wider block">
-              Foreign Ownership Capacity
+              Available Non-Voting Exposure Capacity
             </span>
             <div className="text-2xl sm:text-3xl font-bold text-amber-400 font-mono">
-              100% Unlocked
+              Expanded
             </div>
-            <span className="text-[11px] text-slate-400">FOL utilized equities</span>
+            <span className="text-[11px] text-slate-400">Within segregated custodian holdings</span>
           </div>
 
           <div className="space-y-1">
             <span className="text-xs text-slate-400 font-mono uppercase tracking-wider block">
-              Fully Backed Ratio
+              Required Backing Ratio
             </span>
             <div className="text-2xl sm:text-3xl font-bold text-emerald-400 font-mono flex items-center gap-2">
-              100.0%
+              100% Min
               <CheckCircle2 className="w-5 h-5 text-emerald-400 inline" />
             </div>
-            <span className="text-[11px] text-slate-400">Daily auditor-verified parity</span>
+            <span className="text-[11px] text-slate-400">Coverage: 112.16% (2.7M unallocated shares)</span>
           </div>
         </div>
       </section>
@@ -282,7 +282,7 @@ export const LandingPage: React.FC = () => {
               Underlying shares are legally held in segregated custody at licensed domestic banks (Lotus Custody Bank). Assets are ring-fenced under trust protocols and never commingled with platform operations or broker balance sheets.
             </p>
             <div className="pt-2 text-[11px] text-emerald-400 font-mono">
-              ✓ 100% Bankruptcy-Remote Vaults
+              Designed for bankruptcy-remote asset segregation, subject to regulatory approval.
             </div>
           </div>
 
@@ -344,7 +344,7 @@ export const LandingPage: React.FC = () => {
                 <th className="p-4">FOL Status</th>
                 <th className="p-4 text-right">Reference Price</th>
                 <th className="p-4 text-right">Available Receipts</th>
-                <th className="p-4 text-center">Backing Ratio</th>
+                <th className="p-4 text-center">Required Backing</th>
                 <th className="p-4 text-right">Action</th>
               </tr>
             </thead>
@@ -373,7 +373,7 @@ export const LandingPage: React.FC = () => {
                   <td className="p-4 text-center">
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-800/60">
                       <CheckCircle2 className="w-3 h-3 text-emerald-400" />
-                      100% Backed
+                      100% Min Backed
                     </span>
                   </td>
                   <td className="p-4 text-right">
