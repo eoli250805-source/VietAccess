@@ -1,0 +1,6 @@
+{
+  "name": "VietAccess",
+  "description": "Simulated institutional platform providing eligible foreign investors with non-voting economic exposure to selected Vietnamese equities through fully backed digital receipts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
